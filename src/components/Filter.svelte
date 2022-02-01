@@ -12,7 +12,7 @@
 </script>
 
 {#if filtersApplied.length > 0}
-  <Card filterCard="true">
+  <Card filterCard="true" direction={{ duration: 1500 }}>
     <div class="card">
       <ul>
         {#each filtersApplied as filter}

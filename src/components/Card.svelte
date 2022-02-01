@@ -1,9 +1,11 @@
 <script>
+  import { fly } from "svelte/transition";
   export let filterCard = false;
   export let featuredCard = false;
+  export let direction = { y: 200, duration: 1000 };
 </script>
 
-<article class="card" class:filter-card={filterCard} class:featured-card={featuredCard}>
+<article class="card" class:filter-card={filterCard} class:featured-card={featuredCard} transition:fly={direction}>
   <slot />
 </article>
 
